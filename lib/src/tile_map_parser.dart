@@ -77,7 +77,7 @@ class TileMapParser {
     var points = node.getAttribute('points').split(' ');
     return points.map((point) {
       var arr = point.split(',');
-      var p = (str) => int.parse(str);
+      var p = (str) => double.parse(str);
       return new Point(p(arr.first), p(arr.last));
     }).toList();
   }
